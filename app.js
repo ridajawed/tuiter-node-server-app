@@ -6,7 +6,12 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import session from "express-session";
 import "dotenv/config";
 import AuthController from "./users/auth-controller.js";
- 
+import mongoose from "mongoose";
+
+
+// mongoose.connect("mongodb://localhost:27017/tuiter");
+mongoose.connect("mongodb://127.0.0.1:27017/tuiter");
+
 
 const app = express()
 app.use(
