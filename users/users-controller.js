@@ -1,9 +1,9 @@
-import people from './users.js'
-// import * as usersDao from "./users-dao.js";
+// import people from './users.js'
+import * as usersDao from "./users-dao.js";
 
 // let users = people
 const UserController = (app) => {
-  app.get('/api/users', findUsers);
+  app.get('/api/users', findAllUsers);
   app.get('/api/users/:uid', findUserById);
   app.post('/api/users', createUser);
   app.delete('/api/users/:uid', deleteUser);
